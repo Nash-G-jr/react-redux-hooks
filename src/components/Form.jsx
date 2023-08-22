@@ -27,15 +27,15 @@ export const Form = () => {
   return (
     <form onSubmit={submitHandler}>
       <label for="exampleDataList" className="form-label">
-        Find track
+        Add track
       </label>
       <input
         value={value}
         onChange={(e) => setValue(e.target.value)}
-        class="form-control"
+        className="form-control"
         list="datalistOptions"
         id="exampleDataList"
-        placeholder="Type to search..."
+        placeholder="Type here!"
       />
     </form>
   );
