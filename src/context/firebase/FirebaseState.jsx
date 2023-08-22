@@ -20,11 +20,11 @@ export const FirebaseState = ({ children }) => {
   const fetchNotes = async () => {
     showLoader();
     const res = await axios.get(`${url}/notes.json`);
-    // if (res.data === null) {
-    //   dispatch({ type: FETCH_NOTES, payload: [] });
+    if (res.data === null) {
+      dispatch({ type: FETCH_NOTES, payload: [] });
 
-    //   return;
-    // }
+      return;
+    }
     const payload = Object.keys(res.data).map((key) => {
       return {
         ...res.data[key],

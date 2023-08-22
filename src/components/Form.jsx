@@ -13,21 +13,21 @@ export const Form = () => {
       firebase
         .addNote(value.trim())
         .then(() => {
-          alert.show("Трек был добавлен", "success");
+          alert.show("A note has been added", "success");
         })
         .catch(() => {
-          alert.show("Что-то пошло не так", "danger");
+          alert.show("Something went wrong", "danger");
         });
       setValue("");
     } else {
-      alert.show("Введите название трека");
+      alert.show("Enter the name of the note");
     }
   };
 
   return (
     <form onSubmit={submitHandler}>
       <label for="exampleDataList" className="form-label">
-        Add track
+        Add note
       </label>
       <input
         value={value}
